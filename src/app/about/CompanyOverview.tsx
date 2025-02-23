@@ -14,8 +14,8 @@ const CompanyOverview = () => (
         we&apos;re a passionate team dedicated to helping aspiring tech
         professionals shape their careers. With years of experience in the tech
         industry, we understand the challenges early career seekers face, and
-        we’re here to provide the tools and support they need to succeed. Our
-        vision is to make career planning more accessible and personalized,
+        we&apos;re here to provide the tools and support they need to succeed.
+        Our vision is to make career planning more accessible and personalized,
         giving individuals the power to make informed decisions about their
         future.
       </p>
