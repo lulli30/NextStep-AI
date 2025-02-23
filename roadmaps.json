@@ -1,0 +1,95 @@
+[
+  {
+    "roadmap_id": 1643052035000,
+    "title": "Web Developer Roadmap",
+    "steps": [
+      {
+        "step_id": 1,
+        "title": "Learn HTML",
+        "resource_link": "https://example.com/html-course"
+      },
+      {
+        "step_id": 2,
+        "title": "Learn CSS",
+        "resource_link": "https://example.com/css-course"
+      },
+      {
+        "step_id": 3,
+        "title": "Learn JavaScript",
+        "resource_link": "https://example.com/js-course"
+      },
+      {
+        "step_id": 4,
+        "title": "Learn React.js",
+        "resource_link": "https://example.com/react-course"
+      },
+      {
+        "step_id": 5,
+        "title": "Build a Portfolio",
+        "resource_link": "https://example.com/portfolio-guide"
+      }
+    ]
+  },
+  {
+    "roadmap_id": 1643053097000,
+    "title": "Data Scientist Roadmap",
+    "steps": [
+      {
+        "step_id": 1,
+        "title": "Learn Python",
+        "resource_link": "https://example.com/python-course"
+      },
+      {
+        "step_id": 2,
+        "title": "Learn Data Analysis",
+        "resource_link": "https://example.com/data-analysis-course"
+      },
+      {
+        "step_id": 3,
+        "title": "Learn Machine Learning",
+        "resource_link": "https://example.com/ml-course"
+      },
+      {
+        "step_id": 4,
+        "title": "Learn Deep Learning",
+        "resource_link": "https://example.com/deep-learning-course"
+      },
+      {
+        "step_id": 5,
+        "title": "Build Data Science Projects",
+        "resource_link": "https://example.com/data-science-projects"
+      }
+    ]
+  },
+  {
+    "roadmap_id": 1643054151000,
+    "title": "Graphic Designer Roadmap",
+    "steps": [
+      {
+        "step_id": 1,
+        "title": "Learn Adobe Photoshop",
+        "resource_link": "https://example.com/photoshop-course"
+      },
+      {
+        "step_id": 2,
+        "title": "Learn Adobe Illustrator",
+        "resource_link": "https://example.com/illustrator-course"
+      },
+      {
+        "step_id": 3,
+        "title": "Learn Typography",
+        "resource_link": "https://example.com/typography-course"
+      },
+      {
+        "step_id": 4,
+        "title": "Learn Branding Design",
+        "resource_link": "https://example.com/branding-design-course"
+      },
+      {
+        "step_id": 5,
+        "title": "Build a Portfolio",
+        "resource_link": "https://example.com/graphic-design-portfolio"
+      }
+    ]
+  }
+]
