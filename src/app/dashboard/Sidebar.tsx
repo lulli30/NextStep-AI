@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTheme } from "../ThemeContext";
+import Image from "next/image";
 
 interface SidebarProps {
   userProfile: { username: string; email: string } | null;
@@ -35,7 +36,7 @@ const Sidebar = ({
         setIsSidebarOpen(savedState === "true");
       }
     }
-  }, []);
+  }, [setIsSidebarOpen]);
 
   useEffect(() => {
     localStorage.setItem("isSidebarOpen", String(isSidebarOpen));
@@ -66,10 +67,11 @@ const Sidebar = ({
           {isSidebarOpen ? (
             <PanelLeftClose className="h-8 w-8 text-gray-900 dark:text-gray-300" />
           ) : (
-            <img
+            <Image
               src="/images/logo/NextStep AI Logo.png"
               alt="Logo"
-              className="w-13 h-12"
+              width={50} // specify the width of the image
+              height={20} // specify the height of the image
             />
           )}
         </button>
@@ -77,10 +79,11 @@ const Sidebar = ({
         <div className="flex flex-grow flex-col p-6">
           {isSidebarOpen && (
             <h2 className="ml-[-10px] text-2xl font-bold text-gray-800 dark:text-white">
-              <img
+              <Image
                 src="/images/logo/NextStep AI Logo1.png"
                 alt="Logo"
-                className="h-15 w-48"
+                width={200} // specify the width of the image
+                height={30} // specify the height of the image
               />
             </h2>
           )}
