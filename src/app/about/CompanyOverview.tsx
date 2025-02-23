@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 const CompanyOverview = () => (
   <section
     id="company-overview"
@@ -13,12 +11,13 @@ const CompanyOverview = () => (
       </h2>
       <p className="mx-auto mb-8 max-w-4xl text-lg leading-relaxed opacity-90">
         At <span className="text-yellow-300 font-semibold">NextStep AI</span>,
-        we're a passionate team dedicated to helping aspiring tech professionals
-        shape their careers. With years of experience in the tech industry, we
-        understand the challenges early career seekers face, and we’re here to
-        provide the tools and support they need to succeed. Our vision is to
-        make career planning more accessible and personalized, giving
-        individuals the power to make informed decisions about their future.
+        we&apos;re a passionate team dedicated to helping aspiring tech
+        professionals shape their careers. With years of experience in the tech
+        industry, we understand the challenges early career seekers face, and
+        we’re here to provide the tools and support they need to succeed. Our
+        vision is to make career planning more accessible and personalized,
+        giving individuals the power to make informed decisions about their
+        future.
       </p>
     </div>
   </section>

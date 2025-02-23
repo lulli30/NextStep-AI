@@ -10,7 +10,7 @@ const Mission = () => {
         <p className="mx-auto mb-10 max-w-3xl text-lg leading-relaxed">
           With so many career resources out there, what sets NextStep AI apart?
           Our platform offers AI-driven, personalized guidance, and we focus on
-          your unique strengths, challenges, and goals. Whether you're just
+          your unique strengths, challenges, and goals. Whether you&apos;re just
           starting your journey or looking to pivot into a new tech field, we
           provide a roadmap that evolves with you.
         </p>
