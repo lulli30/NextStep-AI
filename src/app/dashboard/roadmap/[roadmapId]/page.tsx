@@ -107,7 +107,7 @@ const RoadmapDetails = ({
         setIsSidebarOpen={setIsSidebarOpen}
       />
       <div
-        className={`mt-12 w-full p-6 transition-all duration-300 ${isSidebarOpen ? "md:ml-[345px]" : "md:ml-[115px] md:mt-0"}`}
+        className={`w-full p-6 transition-all duration-300 ${isSidebarOpen ? "md:ml-[345px]" : "md:ml-[115px]"} mt-12 md:mt-0`}
       >
         <ProgressBar progress={progress} />
 
