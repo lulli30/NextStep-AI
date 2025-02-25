@@ -9,6 +9,7 @@ import {
   Sun,
   Moon,
   PanelLeftClose,
+  Menu,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTheme } from "../ThemeContext";
@@ -53,12 +54,21 @@ const Sidebar = ({
 
   return (
     <div className="relative flex">
+      {/* Backdrop for mobile (closes sidebar when clicked) */}
+      {isSidebarOpen && (
+        <div
+          className="fixed inset-0 z-40 bg-black bg-opacity-50 md:hidden"
+          onClick={toggleSidebar}
+        />
+      )}
+
+      {/* Sidebar */}
       <motion.div
         initial={{ width: isSidebarOpen ? 345 : 115 }}
         animate={{ width: isSidebarOpen ? 345 : 115 }}
         transition={{ duration: 0.1 }}
         className={`fixed left-0 top-0 min-h-screen overflow-hidden bg-white shadow-lg transition-all duration-200 dark:bg-gray-800
-        ${isSidebarOpen ? "w-[345px]" : "w-[115px]"}`}
+          ${isSidebarOpen ? "fixed inset-0 z-50 block w-[345px]" : "hidden"} md:block`}
       >
         <button
           onClick={toggleSidebar}
@@ -70,8 +80,8 @@ const Sidebar = ({
             <Image
               src="/images/logo/NextStep AI Logo.png"
               alt="Logo"
-              width={50} // specify the width of the image
-              height={20} // specify the height of the image
+              width={50}
+              height={20}
             />
           )}
         </button>
@@ -82,8 +92,8 @@ const Sidebar = ({
               <Image
                 src="/images/logo/NextStep AI Logo1.png"
                 alt="Logo"
-                width={200} // specify the width of the image
-                height={30} // specify the height of the image
+                width={200}
+                height={30}
               />
             </h2>
           )}
@@ -134,6 +144,16 @@ const Sidebar = ({
           </button>
         </div>
       </motion.div>
+
+      {/* Mobile Sidebar Toggle Button - Only visible when sidebar is closed */}
+      {!isSidebarOpen && (
+        <button
+          onClick={toggleSidebar}
+          className="fixed left-4 top-4 z-50 rounded-full text-gray-900 shadow-lg dark:text-white md:hidden"
+        >
+          <Menu className="h-8 w-8" />
+        </button>
+      )}
     </div>
   );
 };

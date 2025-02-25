@@ -130,6 +130,22 @@ const Header = () => {
                       )}
                     </li>
                   ))}
+
+                  {/* Sign In & Sign Up Buttons (only visible in mobile menu) */}
+                  <li className="mt-4 flex flex-col space-y-2 lg:hidden">
+                    <Link
+                      href="/signin"
+                      className="block w-full rounded-sm bg-gray-200 px-4 py-2 text-center text-base font-medium text-dark hover:bg-gray-300 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
+                    >
+                      Sign In
+                    </Link>
+                    <Link
+                      href="/signup"
+                      className="block w-full rounded-sm bg-primary px-4 py-2 text-center text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover"
+                    >
+                      Sign Up
+                    </Link>
+                  </li>
                 </ul>
               </nav>
             </div>
@@ -139,13 +155,13 @@ const Header = () => {
                 <>
                   <Link
                     href="/signin"
-                    className="px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
+                    className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
                   >
                     Sign In
                   </Link>
                   <Link
                     href="/signup"
-                    className="rounded-sm bg-primary px-8 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-9 lg:px-6 xl:px-9"
+                    className="hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-9 lg:px-6 xl:px-9"
                   >
                     Sign Up
                   </Link>
