@@ -67,8 +67,8 @@ const Sidebar = ({
         initial={{ width: isSidebarOpen ? 345 : 115 }}
         animate={{ width: isSidebarOpen ? 345 : 115 }}
         transition={{ duration: 0.1 }}
-        className={`fixed left-0 top-0 min-h-screen overflow-hidden bg-white shadow-lg transition-all duration-200 dark:bg-gray-800
-          ${isSidebarOpen ? "fixed inset-0 z-50 block w-[345px]" : "hidden"} md:block`}
+        className={`fixed left-0 top-0 min-h-screen bg-white shadow-lg transition-all duration-200 dark:bg-gray-800
+    ${isSidebarOpen ? "fixed inset-0 z-50 block w-full md:w-[345px]" : "hidden md:block"}`}
       >
         <button
           onClick={toggleSidebar}

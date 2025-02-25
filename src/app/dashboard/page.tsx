@@ -193,9 +193,9 @@ const DashboardPage = () => {
         setIsSidebarOpen={setIsSidebarOpen}
       />
       <div
-        className={`p-6 transition-all duration-300 ${isSidebarOpen ? "ml-[345px]" : "ml-[115px]"}`}
+        className={`p-6 transition-all duration-300 ${isSidebarOpen ? "md:ml-[345px]" : "md:ml-[115px]"} ml-0`}
       >
-        <div className="mb-6 flex items-center justify-between">
+        <div className="mb-6 mt-12 flex items-center justify-between md:mt-0">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
             My Roadmaps
           </h2>
