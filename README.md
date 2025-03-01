@@ -12,7 +12,39 @@ NextSep AI is an AI-powered platform designed to help students and early-career 
 - **User-Friendly Dashboard**: Track progress and manage multiple roadmaps.
 - **Secure Authentication**: Account registration and login for a personalized experience.
 
-## 🏗️ Tech Stack
+## 🏷️ Screenshots
+
+### **1. Login Page**
+
+![Login Page](screenshots/signIn.png)
+_Secure user authentication with email and password login._
+
+### **2. Register Page**
+
+![Register Page](screenshots/signUp.png)
+_User-friendly registration form for account creation._
+
+### **3. Main Dashboard**
+
+![Main Dashboard](screenshots/main.png)
+_Overview of user progress and quick access to career roadmaps._
+
+### **4. User Dashboard**
+
+![User Dashboard](screenshots/userDashboard.png)
+_Manage saved roadmaps and access personalized recommendations._
+
+### **5. Generate New Roadmap**
+
+![Generate Roadmap](screenshots/genNewRoadmap.png)
+_Input desired career path and generate an AI-powered roadmap._
+
+### **6. View Roadmap Details**
+
+![View Details](screenshots/viewDetails.png)
+_Detailed step-by-step breakdown of the generated career roadmap._
+
+## 🛠️ Tech Stack
 
 ### Frontend:
 
