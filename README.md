@@ -15,34 +15,28 @@ NextSep AI is an AI-powered platform designed to help students and early-career 
 ## 🏷️ Screenshots
 
 ### **1. Login Page**
-
 ![Login Page](screenshots/signIn.png)
-_Secure user authentication with email and password login._
+*Secure user authentication with email and password login.*
 
 ### **2. Register Page**
-
 ![Register Page](screenshots/signUp.png)
-_User-friendly registration form for account creation._
+*User-friendly registration form for account creation.*
 
 ### **3. Main Dashboard**
-
 ![Main Dashboard](screenshots/main.png)
-_Overview of user progress and quick access to career roadmaps._
+*Overview of user progress and quick access to career roadmaps.*
 
 ### **4. User Dashboard**
-
 ![User Dashboard](screenshots/userDashboard.png)
-_Manage saved roadmaps and access personalized recommendations._
+*Manage saved roadmaps and access personalized recommendations.*
 
 ### **5. Generate New Roadmap**
-
 ![Generate Roadmap](screenshots/genNewRoadmap.png)
-_Input desired career path and generate an AI-powered roadmap._
+*Input desired career path and generate an AI-powered roadmap.*
 
 ### **6. View Roadmap Details**
-
 ![View Details](screenshots/viewDetails.png)
-_Detailed step-by-step breakdown of the generated career roadmap._
+*Detailed step-by-step breakdown of the generated career roadmap.*
 
 ## 🛠️ Tech Stack
 
@@ -136,9 +130,11 @@ _Detailed step-by-step breakdown of the generated career roadmap._
 
 ## 📩 Deployment
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FNextJSTemplates%2Fstartup-nextjs)
+NextSep AI is deployed on **Vercel**.
 
-[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/NextJSTemplates/startup-nextjs)
+🔗 **Live Site:** [NextSep AI](https://next-step-ai-eight.vercel.app)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FNextJSTemplates%2Fstartup-nextjs)
 
 ---
 
@@ -148,3 +144,4 @@ Developed by **Code Side Mafia**
 - Kimberly Dela Cruz
 - Ernesto Lareza
 - Shyrish Hance Pumanes
+
