@@ -33,7 +33,7 @@ export async function GET(req: NextRequest) {
     `;
 
     const response = await axios.post(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
       { contents: [{ role: "user", parts: [{ text: apiPrompt }] }] },
     );
 
@@ -55,7 +55,8 @@ export async function GET(req: NextRequest) {
 
     // **Step Extraction and Auto-Fixing Logic**
     const steps = [];
-    const stepRegex = /\*\*\s*(\d+\..*?)\s*\*\*\s*\n([\s\S]*?)(?:\n\n|\n$)/g;
+    const stepRegex =
+      /(?:\d+\.\s|\*\*)?(.*?)\*\*?\n([\s\S]*?)(?=\n\s*(?:\d+\.|\*\*|$))/g;
     let match;
 
     while ((match = stepRegex.exec(data)) !== null) {

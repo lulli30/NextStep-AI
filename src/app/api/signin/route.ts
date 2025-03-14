@@ -1,11 +1,44 @@
 import bcrypt from "bcryptjs";
 import { NextResponse } from "next/server";
 import * as cookie from "cookie";
-import { db, collection, getDocs, query, where } from "firebaseConfig.js"; // Ensure the path is correct
+import validator from "validator";
+import { db, collection, getDocs, query, where } from "firebaseConfig.js";
+
+const rateLimitStore = new Map(); // In-memory store for rate limiting
 
 export async function POST(req) {
   try {
     const { email, password } = await req.json();
+
+    // Rate limiting logic
+    const ip = req.headers.get("x-forwarded-for") || req.ip;
+    const now = Date.now();
+
+    if (rateLimitStore.has(ip)) {
+      const { attempts, lastAttempt } = rateLimitStore.get(ip);
+
+      if (attempts >= 5 && now - lastAttempt < 15 * 60 * 1000) {
+        return NextResponse.json(
+          { message: "Too many login attempts. Try again later." },
+          { status: 429 },
+        );
+      }
+
+      rateLimitStore.set(ip, {
+        attempts: attempts + 1,
+        lastAttempt: now,
+      });
+    } else {
+      rateLimitStore.set(ip, { attempts: 1, lastAttempt: now });
+    }
+
+    // Input validation
+    if (!email || !password || !validator.isEmail(email)) {
+      return NextResponse.json(
+        { message: "Invalid credentials" },
+        { status: 400 },
+      );
+    }
 
     // Check if user exists in Firestore
     const usersRef = collection(db, "users");
@@ -13,21 +46,27 @@ export async function POST(req) {
     const querySnapshot = await getDocs(q);
 
     if (querySnapshot.empty) {
-      return NextResponse.json({ message: "User not found" }, { status: 400 });
+      return NextResponse.json(
+        { message: "Invalid credentials" },
+        { status: 400 },
+      );
     }
 
     // Retrieve user data
     const userDoc = querySnapshot.docs[0];
     const user = userDoc.data();
 
-    // Verify password asynchronously
+    // Verify password
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
       return NextResponse.json(
-        { message: "Incorrect password" },
+        { message: "Invalid credentials" },
         { status: 400 },
       );
     }
+
+    // Reset login attempts on successful login
+    rateLimitStore.delete(ip);
 
     // Prepare user session data (excluding password)
     const userData = {
@@ -36,14 +75,15 @@ export async function POST(req) {
       email: user.email,
     };
 
-    // Serialize user session in a cookie
+    // Serialize user session in a secure cookie
     const serialized = cookie.serialize(
       "user_session",
       JSON.stringify(userData),
       {
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production", // Secure cookies in production
-        maxAge: 60 * 60 * 24, // 1 day
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "strict",
+        maxAge: 60 * 60 * 24,
         path: "/",
       },
     );
