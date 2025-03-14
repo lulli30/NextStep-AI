@@ -1,10 +1,10 @@
 # NextSep AI - Personalized Career Pathways in the Tech Industry
 
-## 🚀 Overview
+## Overview
 
 NextSep AI is an AI-powered platform designed to help students and early-career professionals in the tech industry create personalized career roadmaps. By leveraging AI-driven insights, the platform identifies skill gaps, recommends learning resources, and provides a step-by-step guide to achieving career goals.
 
-## ✨ Key Features
+## Key Features
 
 - **AI-Powered Career Roadmaps**: Personalized pathways based on user input and AI recommendations.
 - **Curated Learning Resources**: Access to free and relevant materials for skill development.
@@ -12,7 +12,7 @@ NextSep AI is an AI-powered platform designed to help students and early-career 
 - **User-Friendly Dashboard**: Track progress and manage multiple roadmaps.
 - **Secure Authentication**: Account registration and login for a personalized experience.
 
-## 🏷️ Screenshots
+## Screenshots
 
 ### **1. Login Page**
 
@@ -44,7 +44,7 @@ _Input desired career path and generate an AI-powered roadmap._
 ![View Details](screenshots/viewDetails.png)
 _Detailed step-by-step breakdown of the generated career roadmap._
 
-## 🛠️ Tech Stack
+## 🛠Tech Stack
 
 ### Frontend:
 
@@ -56,7 +56,7 @@ _Detailed step-by-step breakdown of the generated career roadmap._
 - Firebase Firestore for database management
 - AI Integration using Gemini AI API or GPT AI API
 
-## 📌 System Modules
+## System Modules
 
 ### 1. **User Management**
 
@@ -79,24 +79,7 @@ _Detailed step-by-step breakdown of the generated career roadmap._
 - Displays roadmap in an organized format
 - Direct access to learning resources
 
-## 🖥️ System Requirements
-
-### **Hardware Requirements:**
-
-- **Desktop/Laptop:** Intel Core i5/i7 or AMD Ryzen 5/7, 8GB RAM (16GB recommended), 256GB SSD (512GB recommended).
-- **Devices for Testing:** Android & iOS smartphones/tablets.
-- **Network:** High-speed internet (Wi-Fi 6 preferred).
-- **Monitor:** Full HD or higher resolution.
-
-### **Software Requirements:**
-
-- **Development Tools:** Visual Studio Code (React, Tailwind CSS, JSON, Git).
-- **UI/UX Design:** Figma, Adobe XD, Canva.
-- **Testing Tools:** Postman (API testing).
-- **Supported Browsers:** Google Chrome, Firefox, Safari.
-- **Version Control:** GitHub or GitLab.
-
-## 🔍 Data Structure & Models
+## Data Structure & Models
 
 ### **User Data**
 
@@ -128,13 +111,13 @@ _Detailed step-by-step breakdown of the generated career roadmap._
 | type        | Video, Documentation, etc.                 |
 | link        | URL to the resource                        |
 
-## 📌 Architectural Design
+## Architectural Design
 
 - **User Input & Processing:** Users select their career goals → System validates input → Data sent to AI model.
 - **AI-Powered Recommendation:** Gemini AI/GPT API generates roadmap based on industry trends.
 - **Personalized Roadmap Display:** Roadmap is formatted and displayed on the user's dashboard.
 
-## 📩 Deployment
+## Deployment
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FNextJSTemplates%2Fstartup-nextjs)
 
